@@ -1,0 +1,22 @@
+{
+  "name": "simon-game",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000s\u0000i\u0000m\u0000o\u0000n\u0000-\u0000g\u0000a\u0000m\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enrique2007s/simon-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enrique2007s/simon-game/issues"
+  },
+  "homepage": "https://github.com/Enrique2007s/simon-game#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
