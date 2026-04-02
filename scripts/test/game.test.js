@@ -3,7 +3,7 @@
  */
 
 const { test, beforeAll } = require('@jest/globals');
-const { game, newGame, showScore, addTurn, lightsOn } = require('../game')
+const { game, newGame, showScore, addTurn, lightsOn, showTurns } = require('../game')
 
 beforeAll(() => {
     let fs = require('fs');
@@ -30,6 +30,10 @@ describe("Game object contains correct keys", () => {
 
     test("choices contains correct buttons", () => {
         expect(game.choices).toEqual(['button1', 'button2', 'button3', 'button4']);
+    });
+
+    test("addTurn adds a valid turn to the game", () => {
+        expect("turnNumber" in game).toBe(true);
     });
 });
 
@@ -82,5 +86,11 @@ describe("Gameplay works correctly", () => {
         let button = document.getElementById(game.currentGame[0]);
         lightsOn(game.currentGame[0]);
         expect(button.classList).toContain("light");
+    });
+
+    test("Showturns should update gameTurn number", () => {
+        game.turnNumber = 42;
+        showTurns();
+        expect(game.turnNumber).toBe(0);
     });
 });
